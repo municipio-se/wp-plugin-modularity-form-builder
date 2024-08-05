@@ -2,6 +2,30 @@
 
 Simple form builder that uses ACF for forms.
 
+## Installation
+
+1. Add the following to your `composer.json` file:
+   ```json
+   {
+     "repositories": [
+       {
+         "type": "vcs",
+         "url": "https://github.com/municipio-lts/municipio-lts/wp-plugin-modularity-form-builder-2024.git",
+         "only": [
+           "municipio-lts/municipio-lts/wp-plugin-modularity-form-builder-2024"
+         ],
+         "no-api": true
+       },
+     ]
+   }
+   ```
+2. Install the package and its dependencies:
+   ```bash
+   composer require municipio-lts/wp-plugin-modularity-form-builder-2024 helsingborg-stad/acf-export-manager
+   ```
+3. Activate the plugin in WordPress.
+
+
 ## Constants
 
 #### Google Maps Geocoding API key
