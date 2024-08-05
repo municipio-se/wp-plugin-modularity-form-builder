@@ -2,10 +2,6 @@
 .DS_Store
 node_modules
 .npmrc
-dist
-dist/*
-dist/js/*
-dist/css/*
 vendor
 vendor/*
 
