@@ -10,9 +10,9 @@ Simple form builder that uses ACF for forms.
      "repositories": [
        {
          "type": "vcs",
-         "url": "https://github.com/municipio-lts/municipio-lts/wp-plugin-modularity-form-builder-2024.git",
+         "url": "https://github.com/municipio-lts/wp-plugin-modularity-form-builder-2024.git",
          "only": [
-           "municipio-lts/municipio-lts/wp-plugin-modularity-form-builder-2024"
+           "municipio-lts/wp-plugin-modularity-form-builder-2024"
          ],
          "no-api": true
        },
