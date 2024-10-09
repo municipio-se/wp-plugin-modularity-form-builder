@@ -1,6 +1,6 @@
 # Modularity Form Builder
 
-Simple form builder that uses ACF for forms.
+This plugin is an LTS version of the Modularity Form Builder plugin v3.2.2.
 
 ## Installation
 
@@ -21,7 +21,7 @@ Simple form builder that uses ACF for forms.
    ```
 2. Install the package and its dependencies:
    ```bash
-   composer require municipio-lts/wp-plugin-modularity-form-builder-2024:dev-lts/v3.2.2 helsingborg-stad/acf-export-manager
+   composer require municipio-lts/wp-plugin-modularity-form-builder-2024:dev-main helsingborg-stad/acf-export-manager
    ```
 3. Activate the plugin in WordPress.
 
