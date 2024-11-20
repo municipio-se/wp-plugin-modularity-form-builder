@@ -270,7 +270,10 @@ class Submission
         $fileslist = self::sanitizeFilesList($fileslist);
     
         foreach ($fileslist as $key => $files) {
-            if (!is_array($files['name'])) {
+            // Sanitizes the key to the field name (ex. removes id-1-)
+            $sanitizedKey = preg_replace('/id-\d+-/', '', $key);
+
+	    if (!is_array($files['name'])) {
                 $files = self::convertItemToArray($files);
             }
 
@@ -280,18 +283,18 @@ class Submission
 
 
                 //Validate that image is in correct format
-                if (in_array('image/*', $fields[$key]['filetypes'])) {
-                    $fields[$key]['filetypes'] = array_unique(array_merge($fields[$key]['filetypes'], $allowedImageTypes));
+                if (in_array('image/*', $fields[$sanitizedKey]['filetypes'])) {
+                    $fields[$sanitizedKey]['filetypes'] = array_unique(array_merge($fields[$sanitizedKey]['filetypes'], $allowedImageTypes));
                 }
 
                 //Validate that video is in correct format
-                if (in_array('video/*', $fields[$key]['filetypes'])) {
-                    $fields[$key]['filetypes'] = array_unique(array_merge($fields[$key]['filetypes'], $allowedVideoTypes));
+		if (in_array('video/*', $fields[$sanitizedKey]['filetypes'])) {
+                    $fields[$sanitizedKey]['filetypes'] = array_unique(array_merge($fields[$sanitizedKey]['filetypes'], $allowedVideoTypes));
                 }
 
 
                 //Not a valid filetype at all
-                if (!in_array('.' . $fileext, $fields[$key]['filetypes'])) {
+                if (!in_array('.' . $fileext, $fields[$sanitizedKey]['filetypes'])) {
                     error_log('Filetype not allowed');
                     $uploaded['error'] = true;
                     $uploaded['errorData'] = new \WP_Error('filetype-not-allowed', __('Filetype not allowed', 'modularity-form-builder'));
@@ -302,7 +305,7 @@ class Submission
                 $encryptionConfigDefined = defined('ENCRYPT_SECRET_VI') && defined('ENCRYPT_SECRET_KEY') && defined('ENCRYPT_METHOD');
 
                 //Encrypt file if encryption is enabled
-                if (get_option('options_mod_form_crypt') && empty($fields[$key]['upload_videos_external']) && $encryptionConfigDefined) {
+                if (get_option('options_mod_form_crypt') && empty($fields[$sanitizedKey]['upload_videos_external']) && $encryptionConfigDefined) {
                     $encrypted = file_put_contents(
                         $files['tmp_name'][$i],
                         \ModularityFormBuilder\App::encryptDecryptFile(
@@ -397,7 +400,7 @@ class Submission
     public function getMailDownloadLink($filePath)
     {
         //Check if encrypted
-        if (strpos($filePath, sanitize_file_name("-enc-" . ENCRYPT_METHOD)) !== false) {
+        if (defined('ENCRYPT_METHOD') && strpos($filePath, sanitize_file_name("-enc-" . ENCRYPT_METHOD)) !== false) {
             return home_url("/") . '?modFormDownloadEncFilePublic=' . urlencode(basename($filePath)) . '&token=' . $this->createToken($filePath);
         }
 
