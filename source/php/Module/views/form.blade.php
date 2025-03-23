@@ -1,5 +1,6 @@
 @card([
-    'classList' => [$classes ]
+    'classList' => [$classes ],
+    'context' => 'module.form',
 ])
     @if (!$hideTitle && !empty($post_title))
         <div class="c-card__header">
