@@ -33,7 +33,7 @@
             <input aria-hidden="true" autocomplete="off" class="modularity-t-field js-no-validation" type="text" id="modularity-{{ $ID }}-t-field" name="modularity-t-field" value="89dwaohdwa9y8"  style="overflow: hidden; width: 1px; height: 1px; opacity: .001; position: absolute; padding: 0; margin: 0; border: none;" tabindex="-1">
 
             <?php /* User must be on page for at least 5 seconds. Honeypot function. */ ?>  
-            <script type="text/javascript">
+            <script{!! wp_sanitize_script_attributes(apply_filters('wp_inline_script_attributes', [])) !!}>
                 ["onload"].forEach(function(e){
                     [].forEach.call(document.querySelectorAll(".modularity-t-field"), function(item) {
                         setTimeout(function() {
