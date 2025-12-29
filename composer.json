@@ -40,6 +40,5 @@
     },
     "extra": {
         "installer-name": "modularity-form-builder"
-    },
-    "version": "3.2.2"
+    }
 }
