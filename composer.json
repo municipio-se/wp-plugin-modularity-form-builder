@@ -1,44 +1,44 @@
 {
-    "name": "municipio/wp-plugin-modularity-form-builder",
-    "type": "wordpress-plugin",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Kristoffer Svanmark",
-            "email": "kristoffer.svanmark@knowit.se"
-        },
-        {
-            "name": "Sebastian Thulin",
-            "email": "sebastian.thulin@helsingborg.se"
-        },
-        {
-            "name": "Jonatan Hanson",
-            "email": "jonatan.hanson@hiq.se"
-        },
-        {
-            "name": "Whitespace",
-            "email": "code@whitespace.se"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require-dev": {
-        "helsingborg-stad/acf-export-manager": ">=1.0.0"
+  "name": "municipio/wp-plugin-modularity-form-builder",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Kristoffer Svanmark",
+      "email": "kristoffer.svanmark@knowit.se"
     },
-    "suggest": {
-        "helsingborg-stad/acf-export-manager": "Required by Modularity Form Builder"
+    {
+      "name": "Sebastian Thulin",
+      "email": "sebastian.thulin@helsingborg.se"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/acf-export-manager.git"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "ModularityFormBuilder\\": "source/php/"
-        }
+    {
+      "name": "Jonatan Hanson",
+      "email": "jonatan.hanson@hiq.se"
     },
-    "extra": {
-        "installer-name": "modularity-form-builder"
+    {
+      "name": "Whitespace",
+      "email": "code@whitespace.se"
     }
+  ],
+  "minimum-stability": "stable",
+  "require-dev": {
+    "helsingborg-stad/acf-export-manager": ">=1.0.0"
+  },
+  "suggest": {
+    "helsingborg-stad/acf-export-manager": "Required by Modularity Form Builder"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/helsingborg-stad/acf-export-manager.git"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ModularityFormBuilder\\": "source/php/"
+    }
+  },
+  "extra": {
+    "installer-name": "modularity-form-builder"
+  }
 }
