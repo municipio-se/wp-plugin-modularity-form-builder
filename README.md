@@ -1,6 +1,6 @@
 # Modularity Form Builder
 
-This plugin is an LTS version of the Modularity Form Builder plugin v3.2.2.
+This plugin is a [Municipio LTS](https://github.com/municipio-se/municipio-lts) version of the [Modularity Form Builder plugin v3.2.2](https://github.com/municipio-se/wp-plugin-modularity-form-builder).
 
 ## Changes in this Fork
 
