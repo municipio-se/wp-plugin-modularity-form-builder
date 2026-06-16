@@ -1,6 +1,15 @@
 # Modularity Form Builder
 
-This plugin is a [Municipio LTS](https://github.com/municipio-se/municipio-lts) version of the [Modularity Form Builder plugin v3.2.2](https://github.com/municipio-se/wp-plugin-modularity-form-builder).
+This plugin is a [Municipio LTS](https://github.com/municipio-se/municipio-lts)
+version of Helsingborg stad's
+[Modularity Form Builder plugin](https://github.com/helsingborg-stad/modularity-form-builder).
+
+## Fork Base
+
+This LTS fork is based on upstream tag
+[`3.2.2`](https://github.com/helsingborg-stad/modularity-form-builder/tree/3.2.2),
+commit
+[`3fd89da`](https://github.com/helsingborg-stad/modularity-form-builder/commit/3fd89dac7717aca9f6214c9157cbaafc2df3321a).
 
 ## Changes in this Fork
 
